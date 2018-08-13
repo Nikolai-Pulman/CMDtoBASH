@@ -1,6 +1,6 @@
 @Echo Off
 Setlocal EnableDelayedExpansion
-Set _RNDLength=8
+Set _RNDLength=16
 Set _Alphanumeric=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 Set _Str=%_Alphanumeric%987654321
 :_LenLoop
@@ -16,4 +16,3 @@ Set /A _RND=_RND%%%_Len%
 SET _RndAlphaNum=!_RndAlphaNum!!_Alphanumeric:~%_RND%,1!
 If !_count! lss %_RNDLength% goto _loop
 Echo !_RndAlphaNum!
-pause >> NUL
